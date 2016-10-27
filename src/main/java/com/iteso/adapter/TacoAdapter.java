@@ -3,24 +3,26 @@ package com.iteso.adapter;
 /**
  * Created by simio on 27/10/2016.
  */
-public class TacoAdapter implements Taco {
+public class TacoAdapter implements Torta {
+    Taco taco;
 
-    Torta torta;
+    public TacoAdapter(Taco taco) {
+        this.taco = taco;
+    }
 
-    TacoAdapter(Torta torta){
-        this.torta = torta;
+    public void cutByHalf() {
+
     }
 
     public void fill() {
-        torta.fill();
+        taco.fill();
     }
 
-    public void fold() {
-        torta.cutByHalf();
-        torta.cover();
+    public void cover() {
+        taco.fold();
     }
 
     public void printDescription() {
-        torta.printDescription();
+        taco.printDescription();
     }
 }

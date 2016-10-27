@@ -1,4 +1,4 @@
-package com.iteso.adapter.impl;
+package com.iteso.adapter;
 
 import com.iteso.adapter.Taco;
 import com.iteso.adapter.Torta;
@@ -13,20 +13,20 @@ public class TortaAdapter implements Taco{
         this.torta = torta;
     }
 
-    @Override
+
     public void fill() {
         torta.cutByHalf();
         torta.fill();
 
     }
 
-    @Override
+
     public void fold() {
         torta.cover();
 
     }
 
-    @Override
+
     public void printDescription() {
         torta.printDescription();
     }
