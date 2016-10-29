@@ -10,19 +10,19 @@ public class TacoAdapter implements Torta {
         this.taco = taco;
     }
 
-    public void cutByHalf() {
-
+    public String cutByHalf() {
+        return "";
     }
 
-    public void fill() {
-        taco.fill();
+    public String fill() {
+        return taco.fill();
     }
 
-    public void cover() {
-        taco.fold();
+    public String cover() {
+        return taco.fold();
     }
 
-    public void printDescription() {
-        taco.printDescription();
+    public String printDescription() {
+        return taco.printDescription();
     }
 }

@@ -14,20 +14,20 @@ public class TortaAdapter implements Taco{
     }
 
 
-    public void fill() {
-        torta.cutByHalf();
-        torta.fill();
+    public String fill() {
+
+        return torta.cutByHalf() + "&" + torta.fill();
 
     }
 
 
-    public void fold() {
-        torta.cover();
+    public String fold() {
+        return torta.cover();
 
     }
 
 
-    public void printDescription() {
-        torta.printDescription();
+    public String printDescription() {
+        return torta.printDescription();
     }
 }
