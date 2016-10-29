@@ -9,32 +9,37 @@ import org.mockito.Mockito;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by simio on 29/10/2016.
  */
 public class TortaPlateTest {
     TortaPlate tortaPlate;
-
+    Torta torta1;
+    Torta torta2;
 
     @Before
     public void setUp(){
-        tortaPlate = mock(TortaPlate.class);
-        Torta torta1 = new TortaBistec();
-        Torta torta2 = new TortaBistec();
+        tortaPlate = new TortaPlate();
+        torta1 = mock(Torta.class);
+        torta2 = mock(Torta.class);
         tortaPlate.addTorta(torta1);
         tortaPlate.addTorta(torta2);
     }
 
-    @Test
-    public void addTacoTest(){
-
-        Mockito.verify(tortaPlate, times(2)).addTorta((Torta) any());
-    }
-
-    @Test
+     @Test
     public void servePlateTest(){
         tortaPlate.servePlate();
+        verify(torta1, times(1)).fill();
+        verify(torta1, times(1)).fill();
+        verify(torta1, times(1)).cover();
+        verify(torta1, times(1)).printDescription();
+
+        verify(torta2, times(1)).cutByHalf();
+        verify(torta2, times(1)).fill();
+        verify(torta2, times(1)).cover();
+        verify(torta2, times(1)).printDescription();
 
 
     }

@@ -19,7 +19,6 @@ public class TortaPlate {
     public void servePlate() {
         for (int i = 0; i < tortas.size(); i++) {
             Torta torta = (Torta) tortas.get(i);
-            torta.fill();
             torta.cutByHalf();
             torta.fill();
             torta.cover();
